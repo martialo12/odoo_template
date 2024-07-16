@@ -1,0 +1,4 @@
+#!/bin/sh 
+
+PYTHON=env/bin/python3 ODOO=src/odoo/odoo-bin
+$PYTHON $ODOO -c demo.cfg "$@"
