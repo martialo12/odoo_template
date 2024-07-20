@@ -1,0 +1,12 @@
+#!/bin/sh
+
+PYTHON=env/bin/python3 ODOO=src/odoo/odoo-bin
+# Define variables for database name and add-ons to install
+DB_NAME=${1:-odoo-test}
+ADDONS=${2:-partner-contact}
+
+# Define the addons path
+ADDONS_PATH="src/odoo/odoo/addons,src/odoo/addons,src/partner-contact/,local"
+
+# Run Odoo with the specified parameters
+$PYTHON $ODOO -c demo.cfg --addons-path=$ADDONS_PATH -d $DB_NAME -u $ADDONS --stop-after-init "$@"

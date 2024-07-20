@@ -1,1 +1,1 @@
-{"name": "dummy", "installable": False}
+{"name": "dummy", "installable": False, "license": "LGPL-3"}
